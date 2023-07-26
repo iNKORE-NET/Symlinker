@@ -25,6 +25,15 @@ namespace Symlinker
         [STAThread]
         private static void Main(string[] args)
         {
+            try
+            {
+                if (Environment.OSVersion.Version.Major >= 6)
+                {
+                    SetProcessDPIAware();
+                }
+            }
+            catch { }
+
             if (string.IsNullOrEmpty((from o in args where o == "--engage" select o).FirstOrDefault()))
             {
                 var btnElevate = new Button { FlatStyle = FlatStyle.System };
@@ -58,6 +67,9 @@ namespace Symlinker
         [DllImport("user32", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern int SendMessage(IntPtr hWnd, uint Msg, int wParam, IntPtr lParam);
 
-        #endregion
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+    
+    #endregion
     }
 }
