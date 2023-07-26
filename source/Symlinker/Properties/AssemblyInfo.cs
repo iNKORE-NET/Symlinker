@@ -1,27 +1,16 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AssemblyInfo.cs" company="ShiftMe, Inc.">
-//   2010-2013
-// </copyright>
-// <summary>
-//   AssemblyInfo.cs
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-
-
-using System.Reflection;
+﻿using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Symlink Creator")]
-[assembly: AssemblyDescription("Symbolic link creator app")]
+[assembly: AssemblyTitle("Symlinker")]
+[assembly: AssemblyDescription("A simple GUI tool with for creating symbolic links")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Alejandro Mora")]
-[assembly: AssemblyProduct("Symlink Creator")]
-[assembly: AssemblyCopyright("Copyright © Alejandro Mora 2016")]
+[assembly: AssemblyCompany("iNKROE!")]
+[assembly: AssemblyProduct("Symlinker")]
+[assembly: AssemblyCopyright("Copyright © iNKORE! 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

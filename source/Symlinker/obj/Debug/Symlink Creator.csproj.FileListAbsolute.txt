@@ -5,12 +5,10 @@ E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.Properties.Reso
 E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlink Creator.csproj.CoreCompileInputs.cache
 E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\info.png
 E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Symlinker.exe.config
-E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Symlinker.exe.manifest
-E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Symlinker.application
 E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Symlinker.exe
 E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Symlinker.pdb
-E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.TrustInfo.xml
-E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.exe.manifest
-E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.application
 E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.exe
 E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.pdb
+E:\Yujun Products\Symlinker\source\Symlinker\bin\Debug\Inkore.UI.WinForms.Styler.dll
+E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlink Creator.csproj.CopyComplete
+E:\Yujun Products\Symlinker\source\Symlinker\obj\Debug\Symlinker.FormAbout.resources

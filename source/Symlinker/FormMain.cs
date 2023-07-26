@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MainWindow.cs" company="ShiftMe, Inc.">
-//   2010-2013
-// </copyright>
-// <summary>
-//   This class manages the window
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-namespace Symlinker
+﻿namespace Symlinker
 {
     using System;
     using System.Deployment.Application;
@@ -46,6 +37,8 @@ namespace Symlinker
             this.toolTip.IsBalloon = true;
             this.linkTypeComboBox.SelectedIndex = 0;
             this.TypeSelector.SelectedIndex = 0;
+
+            this.Icon = Properties.Resources.Symlinker;
         }
 
         #endregion
@@ -348,6 +341,11 @@ namespace Symlinker
             {
                 textBox.Text = files[0];
             }
+        }
+
+        private void aboutButton_Click(object sender, EventArgs e)
+        {
+            new FormAbout().ShowDialog(this);
         }
     }
 }

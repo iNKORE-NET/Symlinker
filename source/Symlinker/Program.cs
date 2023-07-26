@@ -1,5 +1,4 @@
-﻿// Copyright 2015, All Rights Reserved.
-
+﻿
 namespace Symlinker
 {
     using System;
