@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symlink Creator", "Symlinker\Symlink Creator.csproj", "{B92A15F1-D627-40C3-9BEA-CE8977435DE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symlinker", "Symlinker\Symlinker.csproj", "{B92A15F1-D627-40C3-9BEA-CE8977435DE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
