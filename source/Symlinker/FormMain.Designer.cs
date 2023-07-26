@@ -48,7 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.createLinkButton = new Inkore.UI.WinForms.Styler.Controls.AdvButton();
-            this.aboutButton = new Inkore.UI.WinForms.Styler.Controls.WindowControlButton();
+            this.advButton1 = new Inkore.UI.WinForms.Styler.Controls.AdvButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -260,16 +260,17 @@
             this.createLinkButton.UseVisualStyleBackColor = true;
             this.createLinkButton.Click += new System.EventHandler(this.CreateLinkClick);
             // 
-            // aboutButton
+            // advButton1
             // 
-            this.aboutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.aboutButton.Location = new System.Drawing.Point(278, 336);
-            this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(54, 28);
-            this.aboutButton.Style = Inkore.UI.WinForms.Styler.Controls.WindowControlButton.WindowControlButtonStyle.Help;
-            this.aboutButton.TabIndex = 15;
-            this.aboutButton.Text = "windowControlButton1";
-            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+            this.advButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.advButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.advButton1.Location = new System.Drawing.Point(298, 334);
+            this.advButton1.Name = "advButton1";
+            this.advButton1.Size = new System.Drawing.Size(33, 32);
+            this.advButton1.TabIndex = 16;
+            this.advButton1.Text = "?";
+            this.advButton1.UseVisualStyleBackColor = true;
+            this.advButton1.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // FormMain
             // 
@@ -279,7 +280,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(496, 378);
-            this.Controls.Add(this.aboutButton);
+            this.Controls.Add(this.advButton1);
             this.Controls.Add(this.createLinkButton);
             this.Controls.Add(this.TypeSelector);
             this.Controls.Add(this.label6);
@@ -322,7 +323,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private Inkore.UI.WinForms.Styler.Controls.AdvButton createLinkButton;
-        private Inkore.UI.WinForms.Styler.Controls.WindowControlButton aboutButton;
+        private Inkore.UI.WinForms.Styler.Controls.AdvButton advButton1;
     }
 }
 
