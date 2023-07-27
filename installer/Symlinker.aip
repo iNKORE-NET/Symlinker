@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.4" version="20.4" Modules="professional" RootPath="." Language="en" Id="{F3A00084-D829-4E5F-8F51-30F2AB26716D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="Application_AssetGenDestFolderPath" Value="Generated Assets\Thick" ValueType="1"/>
+    <ROW Name="Application_AssetGenSourceFilePath" Value="..\materials\icons\Symlinker_Wide.png" ValueType="1"/>
+    <ROW Name="Application_RunMode" Value="3"/>
+    <ROW Name="Application_WorkingDir" Value="APPDIR\iNKORE\Symlinker"/>
+    <ROW Name="AssetGenPkgDestFolderPath" Value="Generated Assets" ValueType="1"/>
+    <ROW Name="AssetGenPkgSourceFilePath" Value="..\materials\icons\Symlinker_Wide.png" ValueType="1"/>
+    <ROW Name="HiddenItems" Value="MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent;CPLAppletComponent"/>
+    <ROW Name="MigrationUninstallCode" Value="{4C5EA50B-CB49-4BE4-B14C-217958E64EC1}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="business.notyoojun@outlook.com"/>
+    <ROW Property="ARPHELPLINK" Value="https://github.com/InkoreStudios/Symlinker"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/InkoreStudios/Symlinker"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="https://github.com/InkoreStudios/Symlinker"/>
+    <ROW Property="Manufacturer" Value="NotYoojun.!"/>
+    <ROW Property="ProductCode" Value="1033:{37A854FD-97F5-4FB0-A122-7CE5B8C46748} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Symlinker"/>
+    <ROW Property="ProductVersion" Value="1.1.2.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{4C5EA50B-CB49-4BE4-B14C-217958E64EC1}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1" DirectoryOptions="12"/>
+    <ROW Directory="Assets" Directory_Parent="TARGETDIR" DefaultDir="Assets" IsPseudoRoot="1"/>
+    <ROW Directory="Symlink_Dir" Directory_Parent="iNKORE_1_Dir" DefaultDir="SYMLIN~1|Symlinker" DirectoryOptions="12"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="iNKORE_1_Dir" Directory_Parent="APPDIR" DefaultDir="iNKORE" DirectoryOptions="12"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{76CA1F6D-520F-4CCC-84E9-39EAA08BD044}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ProductInformation" ComponentId="{CC23898B-C377-4DBF-AB1A-58AAD53CE883}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Store50x50Logo.scale100.png" ComponentId="{F7E7CB23-5337-43CC-9F5C-7B72C7460EE3}" Directory_="Assets" Attributes="0" KeyPath="Store50x50Logo.scale100.png" Type="0"/>
+    <ROW Component="Symlink" ComponentId="{111D6331-7AA3-4FF0-B719-0103F9532BFA}" Directory_="Symlink_Dir" Attributes="0"/>
+    <ROW Component="Symlinker.exe" ComponentId="{7D45A8EF-5882-496B-9D89-C466421EC111}" Directory_="Symlink_Dir" Attributes="0" KeyPath="Symlinker.exe"/>
+    <ROW Component="Symlinker.exe.config" ComponentId="{61CF7E55-9398-4AF2-8496-39FCAD8A8AEB}" Directory_="Symlink_Dir" Attributes="0" KeyPath="Symlinker.exe.config" Type="0"/>
+    <ROW Component="iNKORE_1" ComponentId="{71D49F82-2D4D-453C-8FFF-E14E57361743}" Directory_="iNKORE_1_Dir" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="AiAppXAssets" Title="AiAppXAssets" Description="Description" Display="3" Level="0" Directory_="APPDIR" Attributes="0" Options="271" Builds="Build_MSIX"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Store50x50Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="STORE5~5.PNG|Store50x50Logo.scale-100.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_48.png" SelfReg="false"/>
+    <ROW File="Symlinker.exe" Component_="Symlinker.exe" FileName="SYMLIN~1.EXE|Symlinker.exe" Attributes="0" SourcePath="..\source\Symlinker\bin\Release\Symlinker.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="Symlinker.exe.config" Component_="Symlinker.exe.config" FileName="SYMLIN~1.CON|Symlinker.exe.config" Attributes="0" SourcePath="..\source\Symlinker\bin\Release\Symlinker.exe.config" SelfReg="false"/>
+    <ROW File="Store50x50Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="STORE5~1.PNG|Store50x50Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Store50x50Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="Store50x50Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="STORE5~2.PNG|Store50x50Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Store50x50Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="Store50x50Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="STORE5~3.PNG|Store50x50Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Store50x50Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="Store50x50Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="STORE5~4.PNG|Store50x50Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Store50x50Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare71x71Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~1.PNG|SymlinkerSquare71x71Logo.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare71x71Logo.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare150x150Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~6.PNG|SymlinkerSquare150x150Logo.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare150x150Logo.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerWide310x150Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~11.PNG|SymlinkerWide310x150Logo.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerWide310x150Logo.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare310x310Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~16.PNG|SymlinkerSquare310x310Logo.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare310x310Logo.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerSplashScreen.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~21.PNG|SymlinkerSplashScreen.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSplashScreen.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare71x71Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~2.PNG|SymlinkerSquare71x71Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare71x71Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare71x71Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~3.PNG|SymlinkerSquare71x71Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare71x71Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare71x71Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~4.PNG|SymlinkerSquare71x71Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare71x71Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare71x71Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~5.PNG|SymlinkerSquare71x71Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare71x71Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare150x150Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~7.PNG|SymlinkerSquare150x150Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare150x150Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare150x150Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~8.PNG|SymlinkerSquare150x150Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare150x150Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare150x150Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLIN~9.PNG|SymlinkerSquare150x150Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare150x150Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare150x150Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~10.PNG|SymlinkerSquare150x150Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare150x150Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerWide310x150Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~12.PNG|SymlinkerWide310x150Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerWide310x150Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerWide310x150Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~13.PNG|SymlinkerWide310x150Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerWide310x150Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerWide310x150Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~14.PNG|SymlinkerWide310x150Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerWide310x150Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerWide310x150Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~15.PNG|SymlinkerWide310x150Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerWide310x150Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare310x310Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~17.PNG|SymlinkerSquare310x310Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare310x310Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare310x310Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~18.PNG|SymlinkerSquare310x310Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare310x310Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare310x310Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~19.PNG|SymlinkerSquare310x310Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare310x310Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare310x310Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~20.PNG|SymlinkerSquare310x310Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare310x310Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.scale100.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~22.PNG|SymlinkerSquare44x44Logo.scale-100.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.scale-100.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize16.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~51.PNG|SymlinkerSquare44x44Logo.targetsize-16.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_16.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize16_altformunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~23.PNG|SymlinkerSquare44x44Logo.targetsize-16_altform-unplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_16.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize16_altformlightunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~24.PNG|SymlinkerSquare44x44Logo.targetsize-16_altform-lightunplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_16.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~27.PNG|SymlinkerSquare44x44Logo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize24.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~25.PNG|SymlinkerSquare44x44Logo.targetsize-24.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_24.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize24_altformunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~28.PNG|SymlinkerSquare44x44Logo.targetsize-24_altform-unplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_24.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize24_altformlightunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~29.PNG|SymlinkerSquare44x44Logo.targetsize-24_altform-lightunplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_24.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~31.PNG|SymlinkerSquare44x44Logo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize32.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~30.PNG|SymlinkerSquare44x44Logo.targetsize-32.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_32.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize32_altformunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~32.PNG|SymlinkerSquare44x44Logo.targetsize-32_altform-unplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_32.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize32_altformlightunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~33.PNG|SymlinkerSquare44x44Logo.targetsize-32_altform-lightunplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_32.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~35.PNG|SymlinkerSquare44x44Logo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize48.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~26.PNG|SymlinkerSquare44x44Logo.targetsize-48.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_48.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize48_altformunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~34.PNG|SymlinkerSquare44x44Logo.targetsize-48_altform-unplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_48.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize48_altformlightunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~36.PNG|SymlinkerSquare44x44Logo.targetsize-48_altform-lightunplated.png" Attributes="0" SourcePath="..\materials\icons\Symlinker_48.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~39.PNG|SymlinkerSquare44x44Logo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize256.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~40.PNG|SymlinkerSquare44x44Logo.targetsize-256.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.targetsize-256.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize256_altformunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~41.PNG|SymlinkerSquare44x44Logo.targetsize-256_altform-unplated.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.targetsize-256_altform-unplated.png" SelfReg="false"/>
+    <ROW File="SymlinkerSquare44x44Logo.targetsize256_altformlightunplated.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~42.PNG|SymlinkerSquare44x44Logo.targetsize-256_altform-lightunplated.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSquare44x44Logo.targetsize-256_altform-lightunplated.png" SelfReg="false"/>
+    <ROW File="SymlinkerSplashScreen.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~43.PNG|SymlinkerSplashScreen.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSplashScreen.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerSplashScreen.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~44.PNG|SymlinkerSplashScreen.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSplashScreen.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerSplashScreen.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~45.PNG|SymlinkerSplashScreen.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSplashScreen.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerSplashScreen.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~46.PNG|SymlinkerSplashScreen.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerSplashScreen.scale-400.png" SelfReg="false"/>
+    <ROW File="SymlinkerBadgeLogo.scale125.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~47.PNG|SymlinkerBadgeLogo.scale-125.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerBadgeLogo.scale-125.png" SelfReg="false"/>
+    <ROW File="SymlinkerBadgeLogo.scale150.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~48.PNG|SymlinkerBadgeLogo.scale-150.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerBadgeLogo.scale-150.png" SelfReg="false"/>
+    <ROW File="SymlinkerBadgeLogo.scale200.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~49.PNG|SymlinkerBadgeLogo.scale-200.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerBadgeLogo.scale-200.png" SelfReg="false"/>
+    <ROW File="SymlinkerBadgeLogo.scale400.png" Component_="Store50x50Logo.scale100.png" FileName="SYMLI~50.PNG|SymlinkerBadgeLogo.scale-400.png" Attributes="0" SourcePath="Generated Assets\Thick\SymlinkerBadgeLogo.scale-400.png" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AppXCfgComponent">
+    <ROW ID="Configuration" Order="1" ManifestFile="AppxManifest.xml" TargetOs="4" AutoUpdatesFrequency="0" AutoUpdatesOptions="0" ManifestBundleFile="AppxBundleManifest.xml"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="Build_MSIX" BuildName="Build_MSIX" BuildOrder="1" BuildType="7" PackageFolder="Symlinker-Build_MSIX-SetupFiles" PackageFileName="iNKORE.Apps.[|ProductName]-[|ProductVersion]" Languages="en" UwpTargetDesktop="TargetDeviceFamily" UwpAppInstallerManifestFile="MsixAppInstallerData.xml"/>
+    <ROW BuildKey="Build_MSIXSubBuild" BuildName="neutral" BuildOrder="2" BuildType="8" ParentBuild="Build_MSIX"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ATTRIBUTE name="TranslateSegments" value="0b00000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW TimeStampUrl="http://timestamp.digicert.com" SignerDescription="[|ProductName]" SignOptions="0" SignTool="0" UseSha256="1" Subject="CN=iNKORE! Test"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.GenericXmlAttributeComponent">
+    <ROW XmlAttribute="AllowUserInteraction" XmlElement="UX" Name="AllowUserInteraction" Flags="0" Order="0" Value="false"/>
+    <ROW XmlAttribute="AppListEntry" XmlElement="VisualElements" Name="AppListEntry" Flags="0" Order="0" Value="default"/>
+    <ROW XmlAttribute="AppNameInTitle" XmlElement="UX" Name="AppNameInTitle" Flags="0" Order="0" Value="false"/>
+    <ROW XmlAttribute="BackgroundColor" XmlElement="VisualElements" Name="BackgroundColor" Flags="0" Order="0" Value="transparent"/>
+    <ROW XmlAttribute="Description" XmlElement="VisualElements" Name="Description" Flags="0" Order="0" Value="A simple GUI tool with for creating symbolic links"/>
+    <ROW XmlAttribute="DisplayName" XmlElement="VisualElements" Name="DisplayName" Flags="0" Order="0" Value="Symlinker"/>
+    <ROW XmlAttribute="EntryPoint" XmlElement="Application" Name="EntryPoint" Flags="0" Order="0" Value="Windows.FullTrustApplication"/>
+    <ROW XmlAttribute="Executable" XmlElement="Application" Name="Executable" Flags="0" Order="0" FileId="Symlinker.exe"/>
+    <ROW XmlAttribute="HorizontalAlignment" XmlElement="LaunchWhenReady" Name="HorizontalAlignment" Flags="0" Order="0" Value="left"/>
+    <ROW XmlAttribute="HorizontalAlignment_1" XmlElement="Icon" Name="HorizontalAlignment" Flags="0" Order="0" Value="left"/>
+    <ROW XmlAttribute="HorizontalAlignment_2" XmlElement="Buttons" Name="HorizontalAlignment" Flags="0" Order="0" Value="left"/>
+    <ROW XmlAttribute="Id" XmlElement="Application" Name="Id" Flags="0" Order="0" Value="Symlinker"/>
+    <ROW XmlAttribute="IgnorableNamespaces" XmlElement="AppInstallerUX" Name="IgnorableNamespaces" Flags="0" Order="0" Value="ux ux2"/>
+    <ROW XmlAttribute="Image" XmlElement="SplashScreen" Name="Image" Flags="0" Order="0" FileId="SymlinkerSplashScreen.scale100.png"/>
+    <ROW XmlAttribute="IsSecondaryButtonAccent" XmlElement="Buttons" Name="IsSecondaryButtonAccent" Flags="0" Order="0" Value="false"/>
+    <ROW XmlAttribute="Language" XmlElement="Resource" Name="Language" Flags="0" Order="0" Value="en-US"/>
+    <ROW XmlAttribute="Language_1" XmlElement="Resource_2" Name="Language" Flags="0" Order="0" Value="zh-CN"/>
+    <ROW XmlAttribute="Language_2" XmlElement="Resource_3" Name="Language" Flags="0" Order="0" Value="pl-PL"/>
+    <ROW XmlAttribute="Language_3" XmlElement="Resource_4" Name="Language" Flags="0" Order="0" Value="it-IT"/>
+    <ROW XmlAttribute="MaxVersionTested" XmlElement="TargetDeviceFamily" Name="MaxVersionTested" Flags="0" Order="0" Value="10.0.22621.0"/>
+    <ROW XmlAttribute="MinVersion" XmlElement="TargetDeviceFamily" Name="MinVersion" Flags="0" Order="0" Value="10.0.14393.0"/>
+    <ROW XmlAttribute="Mode" XmlElement="AppInformation" Name="Mode" Flags="0" Order="0" Value="flyout"/>
+    <ROW XmlAttribute="Name" XmlElement="Identity" Name="Name" Flags="0" Order="0" Value="47853NotYoojun.Symlinker"/>
+    <ROW XmlAttribute="Name_1" XmlElement="TargetDeviceFamily" Name="Name" Flags="0" Order="0" Value="Windows.Desktop"/>
+    <ROW XmlAttribute="Name_2" XmlElement="Capability" Name="Name" Flags="0" Order="0" Value="allowElevation"/>
+    <ROW XmlAttribute="Name_3" XmlElement="Capability_1" Name="Name" Flags="0" Order="0" Value="unvirtualizedResources"/>
+    <ROW XmlAttribute="Name_4" XmlElement="Capability_2" Name="Name" Flags="0" Order="0" Value="runFullTrust"/>
+    <ROW XmlAttribute="Orientation" XmlElement="Buttons" Name="Orientation" Flags="0" Order="0" Value="horizontal"/>
+    <ROW XmlAttribute="Preference" XmlElement="Rotation" Name="Preference" Flags="0" Order="0" Value="portrait"/>
+    <ROW XmlAttribute="Preference_1" XmlElement="Rotation_1" Name="Preference" Flags="0" Order="0" Value="landscape"/>
+    <ROW XmlAttribute="Preference_2" XmlElement="Rotation_2" Name="Preference" Flags="0" Order="0" Value="portraitFlipped"/>
+    <ROW XmlAttribute="Preference_3" XmlElement="Rotation_3" Name="Preference" Flags="0" Order="0" Value="landscapeFlipped"/>
+    <ROW XmlAttribute="PrimaryButtonMode" XmlElement="Buttons" Name="PrimaryButtonMode" Flags="0" Order="0" Value="normal"/>
+    <ROW XmlAttribute="ProcessorArchitecture" XmlElement="Identity" Name="ProcessorArchitecture" Flags="0" Order="0" Value="x64"/>
+    <ROW XmlAttribute="Publisher" XmlElement="Identity" Name="Publisher" Flags="0" Order="0" Value="CN=33D5D86B-A625-4AEB-ABA0-59810FC98993"/>
+    <ROW XmlAttribute="RuntimeBehavior" XmlElement="Application" Name="RuntimeBehavior" Flags="0" Order="0" Value="packagedClassicApp"/>
+    <ROW XmlAttribute="Scale" XmlElement="Resource_1" Name="Scale" Flags="0" Order="0" Value="100"/>
+    <ROW XmlAttribute="SecondaryButtonMode" XmlElement="Buttons" Name="SecondaryButtonMode" Flags="0" Order="0" Value="normal"/>
+    <ROW XmlAttribute="ShortName" XmlElement="DefaultTile" Name="ShortName" Flags="0" Order="0" Value="Symlinker"/>
+    <ROW XmlAttribute="Size" XmlElement="Icon" Name="Size" Flags="0" Order="0" Value="default"/>
+    <ROW XmlAttribute="Square150x150Logo" XmlElement="VisualElements" Name="Square150x150Logo" Flags="0" Order="0" FileId="SymlinkerSquare150x150Logo.scale100.png"/>
+    <ROW XmlAttribute="Square310x310Logo" XmlElement="DefaultTile" Name="Square310x310Logo" Flags="0" Order="0" FileId="SymlinkerSquare310x310Logo.scale100.png"/>
+    <ROW XmlAttribute="Square44x44Logo" XmlElement="VisualElements" Name="Square44x44Logo" Flags="0" Order="0" FileId="SymlinkerSquare44x44Logo.scale100.png"/>
+    <ROW XmlAttribute="Square71x71Logo" XmlElement="DefaultTile" Name="Square71x71Logo" Flags="0" Order="0" FileId="SymlinkerSquare71x71Logo.scale100.png"/>
+    <ROW XmlAttribute="Subsystem" XmlElement="Application" Name="Subsystem" Flags="0" Order="0" Value="console"/>
+    <ROW XmlAttribute="SupportsMultipleInstances" XmlElement="Application" Name="SupportsMultipleInstances" Flags="0" Order="0" Value="true"/>
+    <ROW XmlAttribute="TrustLevel" XmlElement="Application" Name="TrustLevel" Flags="0" Order="0" Value="mediumIL"/>
+    <ROW XmlAttribute="Version" XmlElement="Identity" Name="Version" Flags="0" Order="0" Value="1.1.2.0"/>
+    <ROW XmlAttribute="Version_1" XmlElement="AppInstallerUX" Name="Version" Flags="0" Order="0" Value="1.0.0"/>
+    <ROW XmlAttribute="Wide310x150Logo" XmlElement="DefaultTile" Name="Wide310x150Logo" Flags="0" Order="0" FileId="SymlinkerWide310x150Logo.scale100.png"/>
+    <ROW XmlAttribute="xmlns" XmlElement="AppInstallerUX" Name="xmlns" Flags="0" Order="0" Value="http://schemas.microsoft.com/msix/appinstallerux"/>
+    <ROW XmlAttribute="xmlnsux" XmlElement="AppInstallerUX" Name="xmlns:ux" Flags="0" Order="0" Value="http://schemas.microsoft.com/msix/appinstallerux"/>
+    <ROW XmlAttribute="xmlnsux2" XmlElement="AppInstallerUX" Name="xmlns:ux2" Flags="0" Order="0" Value="http://schemas.microsoft.com/msix/appinstallerux"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.GenericXmlElementComponent">
+    <ROW XmlElement="AppInformation" ParentElement="AppInstallerUX" Name="AppInformation" Order="3" Flags="0" Type="0"/>
+    <ROW XmlElement="AppInstallerUX" Name="AppInstallerUX" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="Application" ParentElement="Applications" Name="Application" Order="0" Flags="0" Type="4"/>
+    <ROW XmlElement="Applications" ParentElement="Package" Name="Applications" Order="3" Flags="0" Type="3"/>
+    <ROW XmlElement="Bundle" Name="Bundle" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="Buttons" ParentElement="AppInstallerUX" Name="Buttons" Order="1" Flags="0" Type="0"/>
+    <ROW XmlElement="Capabilities" ParentElement="Package" Name="Capabilities" Order="5" Flags="0" Type="0"/>
+    <ROW XmlElement="Capability" ParentElement="Capabilities" Name="Capability" Order="1" Flags="0" Type="0"/>
+    <ROW XmlElement="Capability_1" ParentElement="Capabilities" Name="Capability" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="Capability_2" ParentElement="Capabilities" Name="Capability" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="DefaultTile" ParentElement="VisualElements" Name="DefaultTile" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="Dependencies" ParentElement="Package" Name="Dependencies" Order="4" Flags="0" Type="0"/>
+    <ROW XmlElement="Description" ParentElement="Properties" Name="Description" Order="3" Flags="0" Text="A simple GUI tool with for creating symbolic links" Type="0"/>
+    <ROW XmlElement="DisplayName" ParentElement="Properties" Name="DisplayName" Order="1" Flags="0" Text="Symlinker" Type="0"/>
+    <ROW XmlElement="Icon" ParentElement="AppInstallerUX" Name="Icon" Order="4" Flags="0" Type="0"/>
+    <ROW XmlElement="Identity" ParentElement="Package" Name="Identity" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="InitialRotationPreference" ParentElement="VisualElements" Name="InitialRotationPreference" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="LaunchWhenReady" ParentElement="AppInstallerUX" Name="LaunchWhenReady" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="Logo" ParentElement="Properties" Name="Logo" Order="2" Flags="0" FileId="Store50x50Logo.scale100.png" Type="0"/>
+    <ROW XmlElement="Package" Name="Package" Order="0" Flags="0" Type="6"/>
+    <ROW XmlElement="Properties" ParentElement="Package" Name="Properties" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="PublisherDisplayName" ParentElement="Properties" Name="PublisherDisplayName" Order="0" Flags="0" Text="NotYoojun.!" Type="0"/>
+    <ROW XmlElement="Resource" ParentElement="Resources" Name="Resource" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="Resource_1" ParentElement="Resources" Name="Resource" Order="1" Flags="0" Type="0"/>
+    <ROW XmlElement="Resource_2" ParentElement="Resources" Name="Resource" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="Resource_3" ParentElement="Resources" Name="Resource" Order="3" Flags="0" Type="0"/>
+    <ROW XmlElement="Resource_4" ParentElement="Resources" Name="Resource" Order="4" Flags="0" Type="0"/>
+    <ROW XmlElement="Resources" ParentElement="Package" Name="Resources" Order="1" Flags="0" Type="0"/>
+    <ROW XmlElement="Rotation" ParentElement="InitialRotationPreference" Name="Rotation" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="Rotation_1" ParentElement="InitialRotationPreference" Name="Rotation" Order="1" Flags="0" Type="0"/>
+    <ROW XmlElement="Rotation_2" ParentElement="InitialRotationPreference" Name="Rotation" Order="2" Flags="0" Type="0"/>
+    <ROW XmlElement="Rotation_3" ParentElement="InitialRotationPreference" Name="Rotation" Order="3" Flags="0" Type="0"/>
+    <ROW XmlElement="SplashScreen" ParentElement="VisualElements" Name="SplashScreen" Order="3" Flags="0" Type="0"/>
+    <ROW XmlElement="SupportedUsers" ParentElement="Properties" Name="SupportedUsers" Order="4" Flags="0" Text="multiple" Type="0"/>
+    <ROW XmlElement="TargetDeviceFamily" ParentElement="Dependencies" Name="TargetDeviceFamily" Order="0" Flags="0" Type="28"/>
+    <ROW XmlElement="UX" ParentElement="AppInstallerUX" Name="UX" Order="0" Flags="0" Type="0"/>
+    <ROW XmlElement="VisualElements" ParentElement="Application" Name="VisualElements" Order="0" Flags="0" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.GenericXmlFileComponent">
+    <ROW XmlFile="AppxBundleManifest.xml" FileName="AppxBundleManifest.xml" RootElement="Bundle" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="AppxManifest.xml" FileName="AppxManifest.xml" RootElement="Package" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+    <ROW XmlFile="MsixAppInstallerData.xml" FileName="MsixAppInstallerData.xml" RootElement="AppInstallerUX" Flags="89" Version="1.0" Encoding="UTF-8" IndentUnits="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="Symlink_Dir" Component_="Symlink" ManualDelete="false"/>
+    <ROW Directory_="iNKORE_1_Dir" Component_="iNKORE_1" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="Build_MSIX:"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="AiAppXAssets" Component_="Store50x50Logo.scale100.png"/>
+    <ROW Feature_="MainFeature" Component_="Symlink"/>
+    <ROW Feature_="MainFeature" Component_="Symlinker.exe"/>
+    <ROW Feature_="MainFeature" Component_="Symlinker.exe.config"/>
+    <ROW Feature_="MainFeature" Component_="iNKORE_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="52"/>
+    <ROW Action="AI_DETECT_MODERNWIN" Condition="(VersionNT &gt;= 603)" Sequence="54" MsiKey="AI_DETECT_MODERNWIN"/>
+    <ROW Action="AI_DETECT_WINTHEME" Condition="(VersionNT &gt;= 603)" Sequence="55" MsiKey="AI_DETECT_WINTHEME"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="54"/>
+    <ROW Action="AI_DpiContentScale" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="52"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLockPermComponent">
+    <ROW LockObject="APPDIR" Table="CreateFolder" Domain="[%USERDOMAIN]" User="[GRP_EVERYONE]" Permission="2032127" Flags="4"/>
+    <ROW LockObject="Symlink_Dir" Table="CreateFolder" User="[GRP_EVERYONE]" Permission="2032127" Flags="4"/>
+    <ROW LockObject="iNKORE_1_Dir" Table="CreateFolder" User="[GRP_EVERYONE]" Permission="2032127" Flags="4"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="769" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

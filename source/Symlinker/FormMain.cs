@@ -347,5 +347,63 @@
         {
             new FormAbout().ShowDialog(this);
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                System.Security.Principal.WindowsIdentity identity = System.Security.Principal.WindowsIdentity.GetCurrent();
+                //创建Windows用户主题
+                Application.EnableVisualStyles();
+                System.Security.Principal.WindowsPrincipal principal = new System.Security.Principal.WindowsPrincipal(identity);
+                //判断当前登录用户是否为管理员
+                if (principal.IsInRole(System.Security.Principal.WindowsBuiltInRole.Administrator))
+                {
+                    Panel_ElevateRequired.Visible = false;
+                    Button_Elevate.Visible = false;
+                }
+                else
+                {
+                    if (System.Windows.Forms.Application.ExecutablePath.Contains("WindowsApps"))
+                    {
+                        Panel_ElevateRequired.Visible = true;
+                        Button_Elevate.Visible = false;
+                    }
+                    else
+                    {
+                        Panel_ElevateRequired.Visible = false;
+                        Button_Elevate.Visible = true;
+                    }
+                }
+            }
+            catch { }
+        }
+
+        private void Button_Elevate_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                this.Hide();
+
+                //创建启动对象
+                System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                //设置运行文件
+                startInfo.FileName = System.Windows.Forms.Application.ExecutablePath;
+                //设置启动动作,确保以管理员身份运行
+                startInfo.Verb = "runas";
+                //如果不是管理员，则启动UAC
+                System.Diagnostics.Process.Start(startInfo);
+                //退出
+                System.Windows.Forms.Application.Exit();
+            }
+            catch(Exception ex)
+            {
+                this.Show();
+
+                MessageBox.Show(ex.Message, ex.GetType().Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

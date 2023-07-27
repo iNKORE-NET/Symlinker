@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Symlinker")]
 [assembly: AssemblyDescription("A simple GUI tool with for creating symbolic links")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("iNKROE!")]
+[assembly: AssemblyCompany("iNKORE!")]
 [assembly: AssemblyProduct("Symlinker")]
 [assembly: AssemblyCopyright("Copyright © iNKORE! 2023")]
 [assembly: AssemblyTrademark("")]

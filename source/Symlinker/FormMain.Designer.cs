@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLocationTextBox = new System.Windows.Forms.TextBox();
-            this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.exploreButton1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,9 +48,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.createLinkButton = new Inkore.UI.WinForms.Styler.Controls.AdvButton();
             this.advButton1 = new Inkore.UI.WinForms.Styler.Controls.AdvButton();
+            this.folderBrowser = new Inkore.UI.WinForms.Styler.Dialogs.VistaFolderBrowserDialog();
+            this.Button_Elevate = new Inkore.UI.WinForms.Styler.Controls.AdvButton();
+            this.dragDropSign1 = new Inkore.UI.WinForms.Styler.Controls.DragDropSign();
+            this.Panel_ElevateRequired = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.Panel_ElevateRequired.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,11 +81,6 @@
             this.linkLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.TextBox_DragDrop);
             this.linkLocationTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.TextBox_DragEnter);
             this.linkLocationTextBox.DragOver += new System.Windows.Forms.DragEventHandler(this.TextBox_DragOver);
-            // 
-            // folderBrowser
-            // 
-            this.folderBrowser.Description = "Please select a folder";
-            this.folderBrowser.ShowNewFolderButton = false;
             // 
             // exploreButton1
             // 
@@ -251,9 +251,8 @@
             // 
             this.createLinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.createLinkButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.createLinkButton.Location = new System.Drawing.Point(335, 334);
+            this.createLinkButton.Location = new System.Drawing.Point(335, 336);
             this.createLinkButton.Name = "createLinkButton";
-            this.createLinkButton.ShowShield = true;
             this.createLinkButton.Size = new System.Drawing.Size(128, 32);
             this.createLinkButton.TabIndex = 14;
             this.createLinkButton.Text = "Create Symlink";
@@ -264,13 +263,53 @@
             // 
             this.advButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.advButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.advButton1.Location = new System.Drawing.Point(298, 334);
+            this.advButton1.Location = new System.Drawing.Point(298, 336);
             this.advButton1.Name = "advButton1";
             this.advButton1.Size = new System.Drawing.Size(33, 32);
             this.advButton1.TabIndex = 16;
             this.advButton1.Text = "?";
             this.advButton1.UseVisualStyleBackColor = true;
             this.advButton1.Click += new System.EventHandler(this.aboutButton_Click);
+            // 
+            // Button_Elevate
+            // 
+            this.Button_Elevate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Button_Elevate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Button_Elevate.Location = new System.Drawing.Point(36, 336);
+            this.Button_Elevate.Name = "Button_Elevate";
+            this.Button_Elevate.ShowShield = true;
+            this.Button_Elevate.Size = new System.Drawing.Size(152, 32);
+            this.Button_Elevate.TabIndex = 17;
+            this.Button_Elevate.Text = "Run as administrator";
+            this.Button_Elevate.UseVisualStyleBackColor = true;
+            this.Button_Elevate.Click += new System.EventHandler(this.Button_Elevate_Click);
+            // 
+            // dragDropSign1
+            // 
+            this.dragDropSign1.Location = new System.Drawing.Point(3, 3);
+            this.dragDropSign1.Name = "dragDropSign1";
+            this.dragDropSign1.Size = new System.Drawing.Size(25, 32);
+            this.dragDropSign1.Style = Inkore.UI.WinForms.Styler.Controls.DragDropSignStyle.Warning;
+            this.dragDropSign1.TabIndex = 18;
+            this.dragDropSign1.Text = "dragDropSign1";
+            // 
+            // Panel_ElevateRequired
+            // 
+            this.Panel_ElevateRequired.Controls.Add(this.label7);
+            this.Panel_ElevateRequired.Controls.Add(this.dragDropSign1);
+            this.Panel_ElevateRequired.Location = new System.Drawing.Point(17, 335);
+            this.Panel_ElevateRequired.Name = "Panel_ElevateRequired";
+            this.Panel_ElevateRequired.Size = new System.Drawing.Size(253, 27);
+            this.Panel_ElevateRequired.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(28, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(216, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Run as administrator to acees the file system";
             // 
             // FormMain
             // 
@@ -279,7 +318,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(496, 378);
+            this.ClientSize = new System.Drawing.Size(496, 384);
+            this.Controls.Add(this.Panel_ElevateRequired);
+            this.Controls.Add(this.Button_Elevate);
             this.Controls.Add(this.advButton1);
             this.Controls.Add(this.createLinkButton);
             this.Controls.Add(this.TypeSelector);
@@ -292,11 +333,14 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Symlinker";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.Panel_ElevateRequired.ResumeLayout(false);
+            this.Panel_ElevateRequired.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +350,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox linkLocationTextBox;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowser;
         private System.Windows.Forms.Button exploreButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -324,6 +367,11 @@
         private System.Windows.Forms.Label label6;
         private Inkore.UI.WinForms.Styler.Controls.AdvButton createLinkButton;
         private Inkore.UI.WinForms.Styler.Controls.AdvButton advButton1;
+        private Inkore.UI.WinForms.Styler.Dialogs.VistaFolderBrowserDialog folderBrowser;
+        private Inkore.UI.WinForms.Styler.Controls.AdvButton Button_Elevate;
+        private System.Windows.Forms.Panel Panel_ElevateRequired;
+        private System.Windows.Forms.Label label7;
+        private Inkore.UI.WinForms.Styler.Controls.DragDropSign dragDropSign1;
     }
 }
 
