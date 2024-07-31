@@ -62,9 +62,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 21);
+            this.label1.Location = new System.Drawing.Point(10, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 13);
+            this.label1.Size = new System.Drawing.Size(291, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please select the place where you want your link:";
             // 
@@ -73,9 +74,10 @@
             this.linkLocationTextBox.AllowDrop = true;
             this.linkLocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLocationTextBox.Location = new System.Drawing.Point(12, 39);
+            this.linkLocationTextBox.Location = new System.Drawing.Point(14, 51);
+            this.linkLocationTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linkLocationTextBox.Name = "linkLocationTextBox";
-            this.linkLocationTextBox.Size = new System.Drawing.Size(338, 20);
+            this.linkLocationTextBox.Size = new System.Drawing.Size(394, 23);
             this.linkLocationTextBox.TabIndex = 1;
             this.linkLocationTextBox.WordWrap = false;
             this.linkLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.TextBox_DragDrop);
@@ -86,9 +88,10 @@
             // 
             this.exploreButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exploreButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.exploreButton1.Location = new System.Drawing.Point(356, 37);
+            this.exploreButton1.Location = new System.Drawing.Point(415, 48);
+            this.exploreButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exploreButton1.Name = "exploreButton1";
-            this.exploreButton1.Size = new System.Drawing.Size(79, 23);
+            this.exploreButton1.Size = new System.Drawing.Size(92, 30);
             this.exploreButton1.TabIndex = 2;
             this.exploreButton1.Text = "Explore...";
             this.exploreButton1.UseVisualStyleBackColor = true;
@@ -97,9 +100,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 66);
+            this.label2.Location = new System.Drawing.Point(13, 86);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 13);
+            this.label2.Size = new System.Drawing.Size(175, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Now give a name to the link:";
             // 
@@ -112,9 +116,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.exploreButton1);
             this.groupBox1.Controls.Add(this.linkLocationTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(25, 123);
+            this.groupBox1.Location = new System.Drawing.Point(29, 162);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 92);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(522, 120);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Link Folder";
@@ -123,9 +129,10 @@
             // 
             this.linkNameComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkNameComboBox.Location = new System.Drawing.Point(176, 63);
+            this.linkNameComboBox.Location = new System.Drawing.Point(222, 82);
+            this.linkNameComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linkNameComboBox.Name = "linkNameComboBox";
-            this.linkNameComboBox.Size = new System.Drawing.Size(174, 20);
+            this.linkNameComboBox.Size = new System.Drawing.Size(186, 23);
             this.linkNameComboBox.TabIndex = 3;
             // 
             // groupBox2
@@ -137,9 +144,11 @@
             this.groupBox2.Controls.Add(this.exploreButton2);
             this.groupBox2.Controls.Add(this.destinationLocationTextBox);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(25, 222);
+            this.groupBox2.Location = new System.Drawing.Point(29, 290);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(447, 102);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(522, 133);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Destination Folder";
@@ -147,9 +156,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 67);
+            this.label5.Location = new System.Drawing.Point(12, 88);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 13);
+            this.label5.Size = new System.Drawing.Size(136, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Select the type of link:";
             // 
@@ -165,9 +175,10 @@
             "Symbolic Link",
             "Hard Link",
             "Directory Junction"});
-            this.linkTypeComboBox.Location = new System.Drawing.Point(175, 64);
+            this.linkTypeComboBox.Location = new System.Drawing.Point(222, 84);
+            this.linkTypeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linkTypeComboBox.Name = "linkTypeComboBox";
-            this.linkTypeComboBox.Size = new System.Drawing.Size(175, 21);
+            this.linkTypeComboBox.Size = new System.Drawing.Size(186, 25);
             this.linkTypeComboBox.TabIndex = 3;
             this.linkTypeComboBox.MouseHover += new System.EventHandler(this.ComboBox1MouseHover);
             // 
@@ -175,9 +186,10 @@
             // 
             this.exploreButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.exploreButton2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.exploreButton2.Location = new System.Drawing.Point(356, 35);
+            this.exploreButton2.Location = new System.Drawing.Point(415, 45);
+            this.exploreButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exploreButton2.Name = "exploreButton2";
-            this.exploreButton2.Size = new System.Drawing.Size(75, 23);
+            this.exploreButton2.Size = new System.Drawing.Size(88, 30);
             this.exploreButton2.TabIndex = 2;
             this.exploreButton2.Text = "Explore...";
             this.exploreButton2.UseVisualStyleBackColor = true;
@@ -188,9 +200,10 @@
             this.destinationLocationTextBox.AllowDrop = true;
             this.destinationLocationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.destinationLocationTextBox.Location = new System.Drawing.Point(11, 37);
+            this.destinationLocationTextBox.Location = new System.Drawing.Point(13, 48);
+            this.destinationLocationTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.destinationLocationTextBox.Name = "destinationLocationTextBox";
-            this.destinationLocationTextBox.Size = new System.Drawing.Size(339, 20);
+            this.destinationLocationTextBox.Size = new System.Drawing.Size(395, 23);
             this.destinationLocationTextBox.TabIndex = 1;
             this.destinationLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.TextBox_DragDrop);
             this.destinationLocationTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.TextBox_DragEnter);
@@ -199,9 +212,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 20);
+            this.label3.Location = new System.Drawing.Point(9, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(271, 13);
+            this.label3.Size = new System.Drawing.Size(336, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Please select the path to the real folder you want to link:";
             // 
@@ -216,9 +230,10 @@
             this.TypeSelector.Items.AddRange(new object[] {
             "Folder symbolic link",
             "File symbolic link"});
-            this.TypeSelector.Location = new System.Drawing.Point(25, 84);
+            this.TypeSelector.Location = new System.Drawing.Point(29, 110);
+            this.TypeSelector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeSelector.Name = "TypeSelector";
-            this.TypeSelector.Size = new System.Drawing.Size(302, 21);
+            this.TypeSelector.Size = new System.Drawing.Size(352, 25);
             this.TypeSelector.TabIndex = 1;
             this.TypeSelector.SelectedIndexChanged += new System.EventHandler(this.TypeSelectorSelectedIndexChanged);
             this.TypeSelector.MouseHover += new System.EventHandler(this.TypeSelectorMouseHover);
@@ -232,7 +247,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(21, 21);
+            this.label4.Location = new System.Drawing.Point(24, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(280, 20);
             this.label4.TabIndex = 12;
@@ -241,19 +257,21 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 59);
+            this.label6.Location = new System.Drawing.Point(26, 76);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(222, 13);
+            this.label6.Size = new System.Drawing.Size(279, 17);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Which type of symlink that you want to create";
+            this.label6.Text = "Which type of symlink that you want to create?";
             // 
             // createLinkButton
             // 
             this.createLinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.createLinkButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.createLinkButton.Location = new System.Drawing.Point(335, 336);
+            this.createLinkButton.Location = new System.Drawing.Point(391, 439);
+            this.createLinkButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createLinkButton.Name = "createLinkButton";
-            this.createLinkButton.Size = new System.Drawing.Size(128, 32);
+            this.createLinkButton.Size = new System.Drawing.Size(149, 42);
             this.createLinkButton.TabIndex = 14;
             this.createLinkButton.Text = "Create Symlink";
             this.createLinkButton.UseVisualStyleBackColor = true;
@@ -263,9 +281,10 @@
             // 
             this.advButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.advButton1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.advButton1.Location = new System.Drawing.Point(298, 336);
+            this.advButton1.Location = new System.Drawing.Point(348, 439);
+            this.advButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.advButton1.Name = "advButton1";
-            this.advButton1.Size = new System.Drawing.Size(33, 32);
+            this.advButton1.Size = new System.Drawing.Size(38, 42);
             this.advButton1.TabIndex = 16;
             this.advButton1.Text = "?";
             this.advButton1.UseVisualStyleBackColor = true;
@@ -275,10 +294,11 @@
             // 
             this.Button_Elevate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Button_Elevate.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Button_Elevate.Location = new System.Drawing.Point(36, 336);
+            this.Button_Elevate.Location = new System.Drawing.Point(42, 439);
+            this.Button_Elevate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Elevate.Name = "Button_Elevate";
             this.Button_Elevate.ShowShield = true;
-            this.Button_Elevate.Size = new System.Drawing.Size(152, 32);
+            this.Button_Elevate.Size = new System.Drawing.Size(177, 42);
             this.Button_Elevate.TabIndex = 17;
             this.Button_Elevate.Text = "Run as administrator";
             this.Button_Elevate.UseVisualStyleBackColor = true;
@@ -286,9 +306,10 @@
             // 
             // dragDropSign1
             // 
-            this.dragDropSign1.Location = new System.Drawing.Point(3, 3);
+            this.dragDropSign1.Location = new System.Drawing.Point(4, 4);
+            this.dragDropSign1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dragDropSign1.Name = "dragDropSign1";
-            this.dragDropSign1.Size = new System.Drawing.Size(25, 32);
+            this.dragDropSign1.Size = new System.Drawing.Size(29, 42);
             this.dragDropSign1.Style = Inkore.UI.WinForms.Styler.Controls.DragDropSignStyle.Warning;
             this.dragDropSign1.TabIndex = 18;
             this.dragDropSign1.Text = "dragDropSign1";
@@ -297,17 +318,19 @@
             // 
             this.Panel_ElevateRequired.Controls.Add(this.label7);
             this.Panel_ElevateRequired.Controls.Add(this.dragDropSign1);
-            this.Panel_ElevateRequired.Location = new System.Drawing.Point(17, 335);
+            this.Panel_ElevateRequired.Location = new System.Drawing.Point(20, 438);
+            this.Panel_ElevateRequired.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_ElevateRequired.Name = "Panel_ElevateRequired";
-            this.Panel_ElevateRequired.Size = new System.Drawing.Size(253, 27);
+            this.Panel_ElevateRequired.Size = new System.Drawing.Size(295, 35);
             this.Panel_ElevateRequired.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 9);
+            this.label7.Location = new System.Drawing.Point(33, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 13);
+            this.label7.Size = new System.Drawing.Size(269, 17);
             this.label7.TabIndex = 19;
             this.label7.Text = "Run as administrator to acees the file system";
             // 
@@ -315,10 +338,10 @@
             // 
             this.AcceptButton = this.createLinkButton;
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(496, 384);
+            this.ClientSize = new System.Drawing.Size(579, 502);
             this.Controls.Add(this.Panel_ElevateRequired);
             this.Controls.Add(this.Button_Elevate);
             this.Controls.Add(this.advButton1);
@@ -328,6 +351,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;

@@ -1,15 +1,15 @@
-﻿namespace Symlinker
-{
-    using System;
-    using System.Deployment.Application;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.IO;
-    using System.Linq;
-    using System.Reflection;
-    using System.Windows.Forms;
+﻿using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Windows.Forms;
 
-    using Symlinker.Properties;
+using Symlinker.Properties;
+
+namespace Symlinker
+{
 
     /// <summary>
     ///     This class manages the window
@@ -300,23 +300,6 @@
 
         private void HelpImageClick(object sender, EventArgs e)
         {
-            string version;
-            try
-            {
-                version = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-            }
-            catch
-            {
-                var assembly = Assembly.GetExecutingAssembly();
-                var fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-                version = fvi.FileVersion;
-            }
-
-            MessageBox.Show(
-                string.Format(CultureInfo.CurrentCulture, Resources.AboutDescription, version),
-                Resources.MessageBoxAboutTitle,
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
         #endregion
 
